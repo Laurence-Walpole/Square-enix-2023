@@ -8,10 +8,10 @@ import (
 func routes(e *echo.Echo) {
 	e.GET("/", root)
 	e.GET("/start", start)
-	e.GET("/stop", stop)
+	e.GET("/pause", pause)
 	e.GET("/stats", stats)
 }
 
 func root(c echo.Context) error {
-	return c.String(http.StatusTeapot, "Undefined, try start, stop or stats.")
+	return c.String(http.StatusTeapot, "Undefined, try start, pause or stats.")
 }
